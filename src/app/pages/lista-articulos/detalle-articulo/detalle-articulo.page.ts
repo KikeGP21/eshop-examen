@@ -11,9 +11,9 @@ export class DetalleArticuloPage implements OnInit {
   public articuloId: any = '';
   public articulo: any = '';
 
-  public descripcionArticulo: string = "Descripción: "
-  public precioArticulo: string = "Precio: "
-  public stockArticulo: string = "Stock: "
+  public descripcionArticulo: string = 'Descripción: ';
+  public precioArticulo: string = 'Precio: ';
+  public stockArticulo: string = 'Stock: ';
 
   constructor(
     private _articulosService: ArticulosService,
