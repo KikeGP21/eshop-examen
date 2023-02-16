@@ -7,9 +7,14 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    // 2. Configurar el routing para que cuando abra la aplicación se vaya directamente a esta página.
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'lista-articulos',
     pathMatch: 'full'
+  },
+  {
+    path: 'lista-articulos',
+    loadChildren: () => import('./pages/lista-articulos/lista-articulos.module').then( m => m.ListaArticulosPageModule)
   },
 ];
 

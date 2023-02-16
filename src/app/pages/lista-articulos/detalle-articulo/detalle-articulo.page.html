@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button defaulHref="/lista-articulos"></ion-back-button>
+    </ion-button>
+    <ion-title>{{articulo.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p><b>{{descripcionArticulo}}</b>{{articulo.description}}</p>
+
+  <p><b>precioArticulo</b>{{articulo.price}}</p>
+
+  <!-- Que el campo stock si es menor de 50 aparezca en color rojo “*ngif” condicionales. -->
+  <p *ngIf="articulo.stock > 50; else pocoStock">
+    <b>Stock: </b>{{articulo.stock}}
+  </p>
+  <ng-template #pocoStock
+    ><p class="pocoStock"><b>Stock: </b>{{articulo.stock}}</p></ng-template
+  >
+
+  <ion-row>
+    <ion-col>
+      <ion-item *ngFor="let image of articulo.images">
+        <ion-img [src]="image" />
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-content>

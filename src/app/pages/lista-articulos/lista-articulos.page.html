@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{titulo}}</ion-title>
+  </ion-toolbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label><b>Título</b></ion-label>
+      </ion-col>
+
+      <ion-col>
+        <ion-label><b>Precio</b></ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item
+      *ngFor="let articulo of articulos"
+      (click)="view_Contact(articulo.id)"
+    >
+      <ion-avatar slot="start">
+        <ion-img [src]="articulo.thumbnail"></ion-img>
+      </ion-avatar>
+
+      <ion-label>{{articulo.title}}</ion-label>
+      <ion-label>{{articulo.price}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

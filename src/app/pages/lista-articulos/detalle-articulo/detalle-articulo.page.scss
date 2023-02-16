@@ -1,0 +1,19 @@
+// 2.	Generar hojas de estilos personalizadas o themes personalizados.
+
+ion-button {
+  --background: #92949c;
+  --color: white;
+}
+
+ion-toolbar {
+  --background: #222428;
+  --color: white;
+}
+
+p {
+  margin-left: 20px;
+}
+
+.pocoStock {
+  color: red;
+}
