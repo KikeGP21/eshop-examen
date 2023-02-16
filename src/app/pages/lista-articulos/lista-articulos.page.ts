@@ -12,6 +12,9 @@ export class ListaArticulosPage implements OnInit {
   public titulo: String = 'Lista de artículos';
   public articulos: any = '';
 
+  public tablaTitulo: string = 'Título';
+  public tablaPrecio: string = 'Precio';
+
   // 6.2º
   constructor(
     private _articulosService: ArticulosService,
