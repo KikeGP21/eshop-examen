@@ -13,6 +13,7 @@ export class DetalleArticuloPage implements OnInit {
 
   public descripcionArticulo: string = "Descripción: "
   public precioArticulo: string = "Precio: "
+  public stockArticulo: string = "Stock: "
 
   constructor(
     private _articulosService: ArticulosService,
